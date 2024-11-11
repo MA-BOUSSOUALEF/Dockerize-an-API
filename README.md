@@ -29,7 +29,7 @@ docker rmi nameOfImage
 docker tag nameImage:latest samenameofImage:whatYouWant
 
 # Create and run  container from an image 
-docker run --name nameOfContainer -d -p port:port nameOfImage:Tag   // port can be 3000:3000 for node and 8080:80 for inginx as an example 
+docker run --name nameOfContainer -d -p port1:port nameOfImage:Tag   // port can be 3000:3000 for node and 8080:80 for inginx as an example 
 # Show all container 
 docker ps 
 # Show all runing container 
@@ -40,4 +40,15 @@ docker rm -f nameOfContainer // -f for forcing the delete action
 docker stop nameOfContainer 
 # Show erreur message 
 docker logs nameOfcontainer 
+# push your image in docker hub 
+-->create rpository 
+create a image  with this name nameAccountDockerHub/nameofRepository:tag
+docker push nameofimage:Tag
+# pull your image
+ docker pull nameofimage
+# for  seign what is in container 
+docker exec -it IDContainer /bin/sh   
+->to know if is /bib/sh or not 
+docker inspect IDContainer 
+->and searche cmd 
 
