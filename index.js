@@ -15,7 +15,11 @@ app.get('/', (req, res) =>
 	{
         name :'Alice' ,
         email : 'Alice@cloud.com'
-	}
+	},
+ 	{
+        name :'Adrian' ,
+        email : 'Adrian@cloud.com'
+        }
 ]))
 
 app.listen(port, () => {
